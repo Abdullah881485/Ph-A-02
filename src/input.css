@@ -28,7 +28,9 @@ h3 {
     font-weight: 600;
     
 }
-
+.spin-badge{
+    animation: spin 4s linear infinite;
+}
 
 nav a{
     margin-right: 15px;
