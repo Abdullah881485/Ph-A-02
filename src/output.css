@@ -48,6 +48,9 @@
 .hidden {
   display: none;
 }
+.table {
+  display: table;
+}
 .h-10 {
   height: calc(var(--spacing) * 10);
 }
@@ -59,12 +62,6 @@
 }
 .w-\[40\%\] {
   width: 40%;
-}
-.w-\[55\%\] {
-  width: 55%;
-}
-.w-\[70\%\] {
-  width: 70%;
 }
 .w-\[76\%\] {
   width: 76%;
@@ -93,8 +90,20 @@
 .min-w-\[40\%\] {
   min-width: 40%;
 }
+.border-collapse {
+  border-collapse: collapse;
+}
+.transform {
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+}
+.animate-spin {
+  animation: var(--animate-spin);
+}
 .cursor-pointer {
   cursor: pointer;
+}
+.resize {
+  resize: both;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -144,6 +153,10 @@
 .rounded-2xl {
   border-radius: var(--radius-2xl);
 }
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
 .bg-\[\#E95A08\] {
   background-color: #E95A08;
 }
@@ -182,6 +195,9 @@
 }
 .py-3 {
   padding-block: calc(var(--spacing) * 3);
+}
+.py-4 {
+  padding-block: calc(var(--spacing) * 4);
 }
 .py-5 {
   padding-block: calc(var(--spacing) * 5);
@@ -247,6 +263,10 @@
   --tw-leading: calc(var(--spacing) * 10);
   line-height: calc(var(--spacing) * 10);
 }
+.leading-12 {
+  --tw-leading: calc(var(--spacing) * 12);
+  line-height: calc(var(--spacing) * 12);
+}
 .font-bold {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
@@ -254,6 +274,10 @@
 .font-light {
   --tw-font-weight: var(--font-weight-light);
   font-weight: var(--font-weight-light);
+}
+.font-medium {
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 .font-normal {
   --tw-font-weight: var(--font-weight-normal);
@@ -292,8 +316,15 @@
 .decoration-white {
   text-decoration-color: var(--color-white);
 }
+.outline {
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+}
 .brightness-50 {
   --tw-brightness: brightness(50%);
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+}
+.filter {
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
 }
 .focus\:border-transparent {
@@ -341,11 +372,6 @@
 .md\:w-\[70\%\] {
   @media (width >= 48rem) {
     width: 70%;
-  }
-}
-.md\:w-\[75\%\] {
-  @media (width >= 48rem) {
-    width: 75%;
   }
 }
 .md\:w-\[80\%\] {
@@ -482,12 +508,13 @@
     --text-6xl--line-height: 1;
     --font-weight-light: 300;
     --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
     --radius-2xl: 1rem;
-    --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
+    --animate-spin: spin 1s linear infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -639,6 +666,7 @@
 }
 @layer utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
@@ -647,7 +675,6 @@
   overflow-x: hidden;
 }
 body {
-  background-color: aliceblue;
   font-family: 'Inter', sans-serif;
 }
 h1, h2 {
@@ -655,27 +682,36 @@ h1, h2 {
   font-weight: bold;
 }
 h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-weight: 600;
 }
 nav a {
   margin-right: 15px;
 }
-.spin-badge {
-  cursor: pointer;
-  animation: spin 6s linear infinite;
-  transition: all 3s linear;
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
 }
-.spin-badge:hover {
-  transform: rotate(360deg);
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-leading {
   syntax: "*";
@@ -688,6 +724,11 @@ nav a {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
@@ -815,9 +856,16 @@ nav a {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
