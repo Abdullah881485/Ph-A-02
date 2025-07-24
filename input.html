@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Assignment-02</title>
 </head>
 <body>
     
-    <header class=" w-[80%] mx-auto p-5">
+    <header class=" w-[90%] md:w-[80%] mx-auto p-5">
         <nav class=" flex justify-between items-center">
             <div class="logo">
-                <img class="w-[90%] " src="pic/logo.png" alt="logo">
+                <img class="w-[55%] md:w-[90%] " src="pic/logo.png" alt="logo">
             </div>
-            <div class="nav-items">
-               <a class="text-[#252432] font-bold" href="#">Home</a>
-               <a class="text-[#8987A1]" href="#">Shop</a>
-               <a class="text-[#8987A1]" href="#">About Us</a>
-               <a class="text-[#252432] font-semi-bold" class="nav-exc" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart ($56) </a> 
+            <div class="nav-items flex gap-5">
+               <a class="text-[#252432] font-bold hidden md:block" href="#">Home</a>
+               <a class="text-[#8987A1] hidden md:block" href="#">Shop</a>
+               <a class="text-[#8987A1] hidden md:block" href="#">About Us</a>
+               <a class="text-[#252432] font-semi-bold " href="#"><i class="fa-solid fa-cart-shopping"></i> Cart ($56) </a> 
                     
             </div>
         </nav>
@@ -26,8 +27,8 @@
     <main>
         <section class="hero">
             <div class="hero-full w-full md:w-[80%] py-20 mx-auto flex justify-between items-center flex-col-reverse md:flex-row">
-                <div class="hero-details w-[80%] md:w-1/2 pt-20">
-                    <h1 class="text-4xl md:text-6xl leading-12 md:leading-20 tracking-wider">ALWAYS <Span class="text-[#E95A08]  ">FRESH FLOWERS</Span></h1>
+                <div class="hero-details w-[90%] md:w-1/2 pt-20">
+                    <h1 class="text-3xl md:text-6xl leading-10 md:leading-20 tracking-wider">ALWAYS <Span class="text-[#E95A08]  ">FRESH FLOWERS</Span></h1>
                     <p class="w-[70%] text-[#7e7676] font-semibold tracking-wide pt-5 md:pt-0">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.</p>
                 </div>
                 <div class="hero-image">
@@ -46,7 +47,7 @@
                <div class="cards py-10 grid grid-cols-2 gap-10 md:grid-cols-4">
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -54,7 +55,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -62,7 +63,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -70,7 +71,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -78,7 +79,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -86,7 +87,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -94,7 +95,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -102,7 +103,7 @@
                     </div>
                     <div class="card-1 max-w-max bg-white overflow-hidden">
                         <img src="pic/sample-flower-image.png" alt="">
-                        <h3 class="text-center text-lg font-semibold pt-3">Lily Blossom</h3>
+                        <h3 class="text-center text-lg font-normal pt-3">Lily Blossom</h3>
                         <h3 class="text-center text-lg font-semibold mb-4 mt-1">20 USD</h3>
                         <div class="button cursor-pointer bg-[#E95A08] w-full py-2 md:py-3 text-white font-light text-center">
                             <a href="#">ADD TO CART</a>
@@ -113,7 +114,7 @@
         </section>
 
 
-        <section class="lover w-[80%] mx-auto relative my-24">
+        <section class="lover w-[80%] mx-auto relative mt-24">
             <div class="trust w-[25%] absolute -top-10 left-[350px] drop-shadow-2xl">
                     <img class="hidden lg:block" src="pic/trusted-badge.png" alt="">
             </div>
@@ -148,7 +149,7 @@
                 
                     <p class="w-fit md:w-[55%] mx-auto text-[#7e7676] font-semibold tracking-wide text-center py-5 text-xs md:text-lg">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh. </p>
                 </div>
-                <div class="img-full flex flex-col md:flex-row gap-5 justify-between ">
+                <div class="img-full flex flex-col lg:flex-row gap-5 justify-between ">
                 <div class="deal-img-left grid grid-cols-1 gap-5 ">
                     <div class="left-img-1 relative w-fit">
                         <img src="pic/deal-bloom.png" alt="" class="brightness-50 rounded-2xl w-full">
@@ -190,7 +191,7 @@
                     Join the colorful Branch
                 </h1>
                 <div class="input flex items-center justify-center py-7 w-full">
-                    <input type="email" name="email" id="email" placeholder="Write email" class="bg-white px-6 py-2 md:py-2.5 min-w-[40%]">
+                    <input type="email" name="email" id="email" placeholder="Write email" class="bg-white px-6 py-2 md:py-2.5 min-w-[40%] focus:outline-none focus:ring-0 focus:border-transparent">
                     <a class="button cursor-pointer bg-[#E95A08] min-w-[15%] px-3 py-3 md:py-2 text-white font-semibold text-center text-xs md:text-lg " href="#">Subscribe</a>
                 </div>
                 </div>
